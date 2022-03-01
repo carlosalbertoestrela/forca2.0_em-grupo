@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;700&display=swap');
+
+:root {
+    --bg-color: #591C3E;
+    --font-color: #0FF231;
+    --kb-color: #16731C;
+    --kb-key: rgba(89, 69, 62, 0.8);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Fredoka', sans-serif;
+    width: 100vw;
+    height: 90vh;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+h1 {
+    color: var(--font-color);
+    text-shadow: 1px 1px 5px #09440dbb;;
+}
+
+a{
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    color: black;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    left: 35%;
+}
+
+#hangman__img {
+    background: url("./../images/forca6.png");
+    width: 19rem;
+    height: 14rem;
+}
+
+/*begin of keyboard style*/
+
+.keyboard {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0;
+    background: var(--kb-color);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    transition: bottom 0.4s;
+    
+}
+
+.kb__keys {
+    text-align: center;
+}
+
+.kb__key {
+    font-family: 'Fredoka', sans-serif;;
+    height: 45px;
+    width: 6%;
+    max-width: 90px;
+    margin: 3px;
+    border-radius: 4px;
+    border: none;
+    background: var(--kb-key);
+    color: black;
+    font-size: 1.05rem;
+    outline: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.kb__key:hover, .kb__key:active {
+    background-color: rgba(53, 33, 25, 0.863);
+}
+
+
+
+.kb__key--wide {
+    width: 12%;
+}
+
+/*end of keyboard style*/
