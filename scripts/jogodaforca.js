@@ -1,34 +1,31 @@
-let chooseWord = (array = []) => {
-    //receives one array and return one random item of the array
-    choosed = Math.floor(Math.random() * (array.length - 0) + 0);
-    return array[choosed];}
+const sort_Categoria_Palavra = (objeto={}) =>{
+    //Carlos Alberto - retorna um array com tema na posição 0 e palavra na posição 1;
+    const aleatorio = (array=[]) =>{
+        max = array.length;
+        return Math.floor(Math.random() * (max - 0) + 0);
+    }
+    const categorias = Object.keys(objeto);
+    const categoria = categorias[aleatorio(categorias)];
+    const elementos = objeto[categoria];
+    const elemento = elementos[aleatorio(elementos)];
+
+    return [categoria.toUpperCase(), elemento.toUpperCase()]
+}
 
    
-fetch("scripts/teste.json")
+
+
+fetch("scripts/teste.json")    
 .then((response) => {
     return response.json();
-})
+})    
 .then((data) => {
 
     let listaPalavras = data 
-    console.log(listaPalavras)
+    
+    categoriaPalavra = sort_Categoria_Palavra(listaPalavras)
+    console.log(categoriaPalavra)
 
-    sorteiaCaterogia();
-
-    function sorteiaCaterogia() {
-        let categoria = Object.keys(listaPalavras);
-        const categoriaSorteada = Math.floor(Math.random() * categoria.length);
-    }
-       
-
-    const indicePalavra = Math.floor(Math.random() * listaPalavras['plantas'].length);
-    console.log(indicePalavra)
     
-    
-    console.log(listaPalavras['plantas']);
-    console.log(categoria[categoriaSorteada]);
-    
-    console.log(chooseWord("essa é a categoria ",categoria))
-    
-})
+})    
 
