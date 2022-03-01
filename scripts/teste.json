@@ -1,0 +1,66 @@
+{
+  "paisesMundo": [
+    "ALEMANHA",
+    "ANDORRA",
+    "ANGOLA",
+    "ARGENTINA",
+    "BAHAMAS",
+    "JAPAO",
+    "ITALIA",
+    "ESPANHA",
+    "HOLANDA",
+    "CHILE",
+    "BRASIL",
+    "EQUADOR",
+    "FRANCA",
+    "CHINA",
+    "RUSSIA",
+    "COREIA DO SUL"
+  ],
+
+  "frutas": [
+    "MACA",
+    "BANANA",
+    "ABACAXI",
+    "ABACATE",
+    "LARANJA",
+    "TANGERINA",
+    "UMBU",
+    "KIWI",
+    "MELANCIA",
+    "MELAO"   
+  ],
+
+  "animais": [
+    "CACHORRO",
+    "GATO",
+    "MACACO",
+    "TAMANDUA",
+    "TATU",
+    "TUBARAO BRANCO",
+    "PAPAGAIO",
+    "CHIPAMZE",
+    "BALEIA",
+    "LAGARTIXA",
+    "JACARE",
+    "CORAL",
+    "CARANGUEJO",
+    "PEIXE DOURADO"
+  ],
+
+  "plantas": [
+    "COQUEIRO",
+    "BANANEIRA",
+    "COPO DE LEITE",
+    "ROSA",
+    "MARGARIDA",
+    "COMIGO NINGUEM PODE",
+    "TAIOBA",
+    "VIDEIRA",
+    "PAU BRASIL",
+    "ESPIRRADEIRA",
+    "MANGUEIRA",
+    "GOIABEIRA"
+  ]
+
+}
