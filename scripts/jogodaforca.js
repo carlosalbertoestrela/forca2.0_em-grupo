@@ -25,7 +25,7 @@ fetch("scripts/teste.json")
     console.log(indicePalavra)
     
     
-    console.log(listaPalavras['plantas'])
+    console.log(listaPalavras['plantas']);
     console.log(categoria[categoriaSorteada]);
     
     console.log(chooseWord("essa é a categoria ",categoria))
