@@ -53,16 +53,15 @@ footer {
 
 #forca__img {
     background: url("./../images/forca6.png");
-    width: 20rem;
-    height: 16rem;
-    margin-bottom: 1rem;
+    width: 25rem;
+    height: 25rem;
     background-repeat: no-repeat;
 }
 
 /*estilização teclado*/
 
 .teclado__virtual {
-    margin-top: 2rem;
+    margin-top: -35rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,6 +82,11 @@ footer {
     border-radius: 5px;
     border: 1px solid var(--kb-key);
     color: rgb(15, 14, 14);
+}
+
+.botaoreplay {
+    text-align: center;
+    vertical-align: sub;
 }
 
 #replay {

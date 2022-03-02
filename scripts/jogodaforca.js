@@ -29,22 +29,36 @@ fetch("scripts/teste.json")
     
 })
 // Rafael - função de tratamento da palavra sorteada
-
+// let categoriaPalavra = "teste";
 // let palavraSorteada = "leite em po";
 // let caracteresPalavraSorteada = "";
 
     function separaCaracteres(){
         
         for(i in palavraSorteada){
-            if(palavraSorteada[i] != " "){
+            if(palavraSorteada[i] != " ") {
                 caracteresPalavraSorteada = caracteresPalavraSorteada + "_";
-            }else{
+            } else {
                 caracteresPalavraSorteada = caracteresPalavraSorteada + " ";
             }
-        
+                
         }
         return caracteresPalavraSorteada;
     }
     separaCaracteres();
     console.log(caracteresPalavraSorteada);
 
+
+// Murillo - função que exibe a categoria e os "_" na tela.
+
+    function mostraNaTela(tema, caracteres) {
+        const mostraCategoria = document.getElementById("categoria__sorteada");
+    mostraCategoria.innerHTML = `${tema}`; 
+        const palavraExibida = document.getElementById('palavra__escondida');
+    palavraExibida.innerHTML = `${caracteres}`;
+
+    }
+
+    mostraNaTela(categoriaPalavra, caracteresPalavraSorteada);
+
+// fim mostraNaTela
