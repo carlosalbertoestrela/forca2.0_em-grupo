@@ -27,5 +27,24 @@ fetch("scripts/teste.json")
     console.log(categoriaPalavra)
 
     
-})    
+})
+// Rafael - função de tratamento da palavra sorteada
+
+// let palavraSorteada = "leite em po";
+// let caracteresPalavraSorteada = "";
+
+    function separaCaracteres(){
+        
+        for(i in palavraSorteada){
+            if(palavraSorteada[i] != " "){
+                caracteresPalavraSorteada = caracteresPalavraSorteada + "_";
+            }else{
+                caracteresPalavraSorteada = caracteresPalavraSorteada + " ";
+            }
+        
+        }
+        return caracteresPalavraSorteada;
+    }
+    separaCaracteres();
+    console.log(caracteresPalavraSorteada);
 
