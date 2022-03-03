@@ -92,6 +92,7 @@ footer {
 #replay {
     background-color: var(--kb-key);
     box-shadow: 0px 2px 10px var(--kb-color);
+    
 }
 
 .botao:hover {
@@ -100,6 +101,7 @@ footer {
 
 #replay:hover {
     background-color: var(--kb-color);
+    
 }
 
 

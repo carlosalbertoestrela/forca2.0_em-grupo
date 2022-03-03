@@ -99,3 +99,47 @@ fetch("scripts/teste.json")
         }
 
     })
+
+
+
+
+function tiraVida(tentativas) {
+
+    // essa função serve para alterar a img da forca de acordo com o numero de tentativas
+
+    switch(tentativas){
+        case 5:
+            document.getElementById("forca__img").style.background = "url('./assets/images/forca1.png')";
+            break;
+        case 4:
+            document.getElementById("forca__img").style.background = "url('./assets/images/forca2.png')";
+            break;
+        case 3:
+            document.getElementById("forca__img").style.background = "url('./assets/images/forca3.png')";
+            break;
+        case 2:
+            document.getElementById("forca__img").style.background = "url('./assets/images/forca4.png')";
+            break;
+        case 1:
+            document.getElementById("forca__img").style.background = "url('./assets/images/forca5.png')";
+            break;
+        case 0:
+            document.getElementById("forca__img").style.background = "url('./assets/images/forca6.png')";
+            break;
+        default:
+            document.getElementById("forca__img").style.background = "url('./assets/images/forca0.png')";
+            break;
+    }
+    };
+
+
+    function letraUsada(clicada) {
+
+        // essa função deve receber o id da tecla clicada para alterar os atributos CSS dela, impedindo o uso repetido desta tecla
+        
+
+        document.getElementById(clicada).style.pointerEvents = "none";
+        document.getElementById(clicada).style.backgroundColor = "rgba(89, 69, 62, 0.8)";
+        document.getElementById(clicada).style.cursor = "not-allowed";
+    };
+
