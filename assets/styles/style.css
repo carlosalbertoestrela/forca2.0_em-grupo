@@ -17,6 +17,7 @@ body {
     font-family: 'Fredoka', sans-serif;
     width: 100vw;
     height: 90vh;
+    margin: auto;
 }
 
 header {
@@ -28,7 +29,7 @@ header {
 h1 {
     color: var(--font-color);
     text-shadow: 1px 1px 5px #09440dbb;
-    margin-right: 1rem;
+    
 }
 
 a{
@@ -115,6 +116,10 @@ footer {
         width: 2.5rem;
         height: 2rem; 
     }
+
+    h1 {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -130,12 +135,21 @@ footer {
 
 @media (max-width: 520px) {
     .botao {
-        margin: 0.15rem;
+        margin: 0.1rem;
         margin-bottom: 0.1rem;
     }
 
     footer {
         font-size:0.6rem;
+        margin-top: 1rem;
       
     }
-} 
+
+   }
+
+   @media (max-width: 360px) {
+        .botao {
+            width: 1.7rem;
+            height: 1.7rem;
+        }
+   }
