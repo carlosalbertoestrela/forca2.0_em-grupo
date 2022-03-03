@@ -36,13 +36,13 @@ function separaCaracteres(palavra = "") {
 
 // Murillo - função que exibe a categoria e os "_" na tela.
 
-function mostraNaTela(tema, caracteres) {
-    const mostraCategoria = document.getElementById("categoria__sorteada");
-    mostraCategoria.innerHTML = `${tema}`;
-    const palavraExibida = document.getElementById('palavra__escondida');
-    palavraExibida.innerHTML = `${caracteres}`;
+// function mostraNaTela(tema, caracteres) {
+//     const mostraCategoria = document.getElementById("categoria__sorteada");
+//     mostraCategoria.innerHTML = `${tema}`;
+//     const palavraExibida = document.getElementById('palavra__escondida');
+//     palavraExibida.innerHTML = `${caracteres}`;
 
-}
+// }
 
 // fim mostraNaTela
 
@@ -71,25 +71,31 @@ fetch("scripts/teste.json")
         let palavra = temaPalavra[1];
         let palavraSecreta = separaCaracteres(palavra);
         let tema = temaPalavra[0];
-        mostraNaTela(tema, palavraSecreta);
         console.log(palavraSecreta)
+        // mostraNaTela(tema, palavraSecreta);
+        const mostraCategoria = document.getElementById("categoria__sorteada");
+        mostraCategoria.innerHTML = `${tema}`;
+        const palavraExibida = document.getElementById('palavra__escondida');
+        palavraExibida.innerHTML = `${palavraSecreta}`;
 
-        function verificaLetra(letra = '', p = palavra, pS = palavraSecreta){
-        
-            for(i in palavra) {
+        function verificaLetra(letra = '', p = palavra, pS = palavraSecreta) {
+
+            for (i in palavra) {
                 if (p[i] == letra) {
-                    pS.splice( i, 1, letra);
+                    pS.splice(i, 1, letra);
                     palavraExibida.innerHTML = `${pS}`;
                 };
             };
         }
-        var adicionarValor = function(evt) {
-            // Dentro do objeto evt esta o target, e o target tem um value:
-            let inputLetra = document.getElementsByClassName("btn");
-            evt.target.value ;
-        };
 
-        inputLetra.addEventListener("click", () => {
-            console.log("clicou");
-        })
+        // retornar letra clicada no teclado
+        var botoes = document.body.querySelectorAll(".btn");
+
+        for (let x = 0; x < botoes.length; x++) {
+            botoes[x].addEventListener("click", function () {
+                verificaLetra(botoes[x].textContent)
+                console.log(`Clicou em ${botoes[x].textContent}`);
+            });
+        }
+
     })
