@@ -1,64 +1,95 @@
-const sort_Categoria_Palavra = (objeto={}) =>{
+const sort_Categoria_Palavra = (objeto = {}) => {
     //Carlos Alberto - retorna um array com tema na posição 0 e palavra na posição 1;
-    const aleatorio = (array=[]) =>{
+    const aleatorio = (array = []) => {
         max = array.length;
         return Math.floor(Math.random() * (max - 0) + 0);
     }
-    const categorias = Object.keys(objeto);
-    const categoria = categorias[aleatorio(categorias)];
+    const tema = Object.keys(objeto);
+    const categoria = tema[aleatorio(tema)];
     const elementos = objeto[categoria];
     const elemento = elementos[aleatorio(elementos)];
 
     return [categoria.toUpperCase(), elemento.toUpperCase()]
 }
 
-   
-
-
-fetch("scripts/teste.json")    
-.then((response) => {
-    return response.json();
-})    
-.then((data) => {
-
-    let listaPalavras = data 
-    
-    categoriaPalavra = sort_Categoria_Palavra(listaPalavras)
-    console.log(categoriaPalavra)
-
-    
-})
 // Rafael - função de tratamento da palavra sorteada
+
 // let categoriaPalavra = "teste";
 // let palavraSorteada = "leite em po";
-// let caracteresPalavraSorteada = "";
 
-    function separaCaracteres(){
-        
-        for(i in palavraSorteada){
-            if(palavraSorteada[i] != " ") {
-                caracteresPalavraSorteada = caracteresPalavraSorteada + "_";
-            } else {
-                caracteresPalavraSorteada = caracteresPalavraSorteada + " ";
-            }
-                
+function separaCaracteres(palavra = "") {
+    let caracteresPalavraSorteada = "";
+
+    for (i in palavra) {
+        if (palavra[i] != " ") {
+            caracteresPalavraSorteada = caracteresPalavraSorteada + "_";
+        } else {
+            caracteresPalavraSorteada = caracteresPalavraSorteada + " ";
         }
-        return caracteresPalavraSorteada;
+
     }
-    separaCaracteres();
-    console.log(caracteresPalavraSorteada);
+    return caracteresPalavraSorteada.split('');
+}
+// separaCaracteres();
+// console.log(caracteresPalavraSorteada);
 
 
 // Murillo - função que exibe a categoria e os "_" na tela.
 
-    function mostraNaTela(tema, caracteres) {
-        const mostraCategoria = document.getElementById("categoria__sorteada");
-    mostraCategoria.innerHTML = `${tema}`; 
-        const palavraExibida = document.getElementById('palavra__escondida');
+function mostraNaTela(tema, caracteres) {
+    const mostraCategoria = document.getElementById("categoria__sorteada");
+    mostraCategoria.innerHTML = `${tema}`;
+    const palavraExibida = document.getElementById('palavra__escondida');
     palavraExibida.innerHTML = `${caracteres}`;
 
-    }
-
-    mostraNaTela(categoriaPalavra, caracteresPalavraSorteada);
+}
 
 // fim mostraNaTela
+
+
+
+// let letras_erradas = [];
+// if (caracteres.indexOf(letra) < 0) {
+//     alert('Letra errada!!')
+//     letras_erradas.push(letra)
+// };
+
+// console.log(letras_erradas);
+// console.log(parseInt(indices));
+// console.log(caracteres);
+// alert(caracteres);
+
+fetch("scripts/teste.json")
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => {
+
+        let listaPalavras = data;
+        const temaPalavra = sort_Categoria_Palavra(listaPalavras);
+        console.log(temaPalavra);
+        let palavra = temaPalavra[1];
+        let palavraSecreta = separaCaracteres(palavra);
+        let tema = temaPalavra[0];
+        mostraNaTela(tema, palavraSecreta);
+        console.log(palavraSecreta)
+
+        function verificaLetra(letra = '', p = palavra, pS = palavraSecreta){
+        
+            for(i in palavra) {
+                if (p[i] == letra) {
+                    pS.splice( i, 1, letra);
+                    palavraExibida.innerHTML = `${pS}`;
+                };
+            };
+        }
+        var adicionarValor = function(evt) {
+            // Dentro do objeto evt esta o target, e o target tem um value:
+            let inputLetra = document.getElementsByClassName("btn");
+            evt.target.value ;
+        };
+
+        inputLetra.addEventListener("click", () => {
+            console.log("clicou");
+        })
+    })
