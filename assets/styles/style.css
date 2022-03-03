@@ -27,7 +27,8 @@ header {
 
 h1 {
     color: var(--font-color);
-    text-shadow: 1px 1px 5px #09440dbb;;
+    text-shadow: 1px 1px 5px #09440dbb;
+    margin-right: 1rem;
 }
 
 a{
@@ -43,12 +44,17 @@ main {
     align-items: center;
 }
 
+#palavra__escondida {
+    font-size: 1.8rem;
+}
+
 footer {
     color: black;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    left: 35%;
+    display: flex;
+    gap: 0.2rem;
+    justify-content: center;
+    margin-top: 5rem;
+
 }
 
 #forca__img {
@@ -75,7 +81,7 @@ footer {
     font-weight: bold;
     background-color: var(--kb-color);
     margin: 0.5rem;
-    margin-bottom: 5px;
+    margin-bottom: 0.313rem;
     cursor: pointer;
     box-shadow: 0px 2px 10px var(--kb-key);
     border-radius: 5px;
@@ -103,3 +109,33 @@ footer {
 
 
 /*fim estilização teclado*/
+
+@media (max-width: 795px) {
+    .botao {
+        width: 2.5rem;
+        height: 2rem; 
+    }
+}
+
+@media (max-width: 600px) {
+    .botao {
+        width: 2rem;
+        height: 2rem; 
+    }
+    footer {
+        font-size:0.6rem;
+    }
+    }
+
+
+@media (max-width: 520px) {
+    .botao {
+        margin: 0.15rem;
+        margin-bottom: 0.1rem;
+    }
+
+    footer {
+        font-size:0.6rem;
+      
+    }
+} 
