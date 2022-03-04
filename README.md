@@ -1,4 +1,4 @@
-# Forca v2.0
+# Forca v2.0 :joystick:
 
 ### Por: [Anna Cesare](https://github.com/acesare), [Carlos Estrela](https://github.com/carlosalbertoestrela), [Murillo Costa](https://github.com/murillocosta) e [Rafael Carvalho](https://github.com/rafaelcarvalhods).
 
