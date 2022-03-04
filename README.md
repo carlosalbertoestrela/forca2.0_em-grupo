@@ -1,13 +1,13 @@
-# Forca v2.0
+# Forca v2.0 :joystick:
 
 ### Por: [Anna Cesare](https://github.com/acesare), [Carlos Estrela](https://github.com/carlosalbertoestrela), [Murillo Costa](https://github.com/murillocosta) e [Rafael Carvalho](https://github.com/rafaelcarvalhods).
 
 
 ## Jogo da Forca feito em HTML, CSS e JavaScript.
 
-O jogo foi desenvolvido como proposta de trabalho em grupo, realizado módulo de JavaScript Básico e Lógica de Programação, durante curso de Desenvolvimento Web FullStack da [Let's Code](https://letscode.com.br/).
+O jogo foi desenvolvido como proposta de trabalho em grupo, realizado no módulo de JavaScript e Lógica de Programação, durante curso de Desenvolvimento Web FullStack da [Let's Code](https://letscode.com.br/).
 
-A forca consome um arquivo JSON de palavras e apresenta representação gráfica em página HTML.
+A forca consome um arquivo JSON de categoria-palavra e apresenta representação gráfica em página HTML e leva estilização com CSS.
 
 O jogo apresenta um teclado virtual e é composto por quatro temas de palavras distintos, sendo eles: Países, Animais, Frutas e Plantas.
 
