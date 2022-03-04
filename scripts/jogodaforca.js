@@ -71,9 +71,9 @@ const verificaJogo = (vida, palavra, palavraSecreta) =>{
 
         document.getElementById("alertaFinal").style.visibility = "visible";
         if(!vida){
-            document.getElementById("alerta").innerHTML = `<p>Deu forca! A palavra era: <strong>${palavra}</strong></p>`;
+            document.getElementById("alerta").innerHTML = `<p>Deu forca! A palavra era: <strong>${palavra}</strong>!</p>`;
         }else{
-            document.getElementById("alerta").innerHTML = `<p><strong>Parabéns, você acertou! A palavra era: ${palavra}</strong></p>`;
+            document.getElementById("alerta").innerHTML = `<p><strong>Parabéns, você acertou! A palavra era: ${palavra}!</strong></p>`;
         }
     }
 }
