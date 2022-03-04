@@ -5,7 +5,7 @@
 
 ## Jogo da Forca feito em HTML, CSS e JavaScript.
 
-O jogo foi desenvolvido como proposta de trabalho em grupo, realizado módulo de JavaScript Básico e Lógica de Programação, durante curso de Desenvolvimento Web FullStack da [Let's Code](https://letscode.com.br/).
+O jogo foi desenvolvido como proposta de trabalho em grupo, realizado módulo de JavaScript e Lógica de Programação, durante curso de Desenvolvimento Web FullStack da [Let's Code](https://letscode.com.br/).
 
 A forca consome um arquivo JSON de palavras e apresenta representação gráfica em página HTML.
 
