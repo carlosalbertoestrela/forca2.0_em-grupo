@@ -56,7 +56,7 @@ function tiraVida(tentativas) {
 };
 
 function letraUsada(clicada) {
-    //Murilo - essa função deve receber o id da tecla clicada para alterar os atributos CSS dela, impedindo o uso repetido desta tecla
+    //Murillo - essa função deve receber o id da tecla clicada para alterar os atributos CSS dela, impedindo o uso repetido desta tecla
     document.getElementById(clicada).style.pointerEvents = "none";
     document.getElementById(clicada).style.backgroundColor = "rgba(89, 69, 62, 0.8)";
     document.getElementById(clicada).style.cursor = "not-allowed";
@@ -66,11 +66,14 @@ const verificaJogo = (vida, palavra, palavraSecreta) =>{
     console.log(palavra == palavraSecreta)
     if (!vida || palavra == palavraSecreta ){
         document.getElementById("alertaFinal").removeAttribute("hidden");
-        document.getElementById("teclado__virtual").setAttribute("hidden","true");
+        // document.getElementById("teclado__virtual").setAttribute("hidden","true");
+        document.getElementById("teclado__virtual").style.visibility = "hidden";
+
+        document.getElementById("alertaFinal").style.visibility = "visible";
         if(!vida){
-            document.getElementById("alerta").innerHTML = `IIIH PERDEU FERA!! A PALAVRA ERA <strong>${palavra}</strong>`;
+            document.getElementById("alerta").innerHTML = `<p>Deu forca! A palavra era: <strong>${palavra}</strong></p>`;
         }else{
-            document.getElementById("alerta").innerHTML = `<strong>AÊ MULEQUE, MANDOU BEM!!</strong>`;
+            document.getElementById("alerta").innerHTML = `<p><strong>Parabéns, você acertou!</strong></p>`;
         }
     }
 }
