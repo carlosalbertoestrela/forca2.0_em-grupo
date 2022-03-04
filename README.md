@@ -1,36 +1,32 @@
-# forca2.0_em grupo
+# Forca v2.0
 
-  Jogo da Forca
+### Por: [Anna Cesare](https://github.com/acesare), [Carlos Estrela](https://github.com/carlosalbertoestrela), [Murillo Costa](https://github.com/murillocosta) e [Rafael Carvalho](https://github.com/rafaelcarvalhods).
 
-         Pedir para o usuário digitar uma letra (mostrar também quais foram as letras que ele já usou)
-         Verificar se esta letra já foi usada
-         Verificar se esta letra NÃO É UMA LETRA
-             Número
-             Não digitou nada (undefined)
-             Palavra (pode ser entendido como o chute da palavra toda)
-                 "Opa, palavra digitada não equivale à palavra sorteada"
-                     Permitir que o cara digite algo para reiniciar
-                 "Parabéns, você adivinhou a palavra sorteada"
-         ----> Verficar se esta letra pertence à palavra sorteada <----
-             Se sim, mostra como a palavra está por enquanto (LETRA PERTENCE À PALAVRA)
-             Se não, mostra como a palavra está por enquanto e mostra a forca (LETRA NÃO PERTENCE À PALAVRA)
-             Caso o usuário já tenha descoberto a palavra toda, dê os parabéns!
-             Caso o usuário tenha perdido todas as partes do corpo na forca, já elvis...
-             De um jeito ou de outro permitir que o usuário REINICIE O JOGO DO ZERO
-                 Sortear outra palavra
-                 Repete o loop principal
-                 (...) 
 
-         OBS1.: Existirá um looping externo (referente à partida, ou seja, à nova palavra)
-         e um looping interno (referente ao jogo principal, no qual vai estar toda a lógica de verificação e casos possíveis)
-         OBS2.: SEMPRE QUE POSSÍVEL mostrar as letras já usadas e a forca em si
+## Jogo da Forca feito em HTML, CSS e JavaScript.
 
-         Exemplo de código de validação no jogo da forca
-         let letrasUsadas = ['A', 'E', 'O'];
-         let letra = prompt("Digite a letra desejada:");
-         while(letrasUsadas.includes(letra)) {
-             letra = prompt("Letra inválida!!! Digite a letra novamente:");
-         }
+O jogo foi desenvolvido como proposta de trabalho em grupo, realizado módulo de JavaScript Básico e Lógica de Programação, durante curso de Desenvolvimento Web FullStack da [Let's Code](https://letscode.com.br/).
 
-         console.log("Letra válida: ", letra);
- 
+A forca consome um arquivo JSON de palavras e apresenta representação gráfica em página HTML.
+
+O jogo apresenta um teclado virtual e é composto por quatro temas de palavras distintos, sendo eles: Países, Animais, Frutas e Plantas.
+
+### Interface gráfica do jogo:
+
+#### Início:
+
+![image](https://user-images.githubusercontent.com/91096652/156813085-9143538a-c97c-4714-9043-6afd2d3173a7.png)
+
+#### Vitória: 
+
+![image](https://user-images.githubusercontent.com/91096652/156813705-e48710cb-d6bf-405a-b03c-4927be9d83c4.png)
+
+#### Derrota: 
+
+![image](https://user-images.githubusercontent.com/91096652/156813805-b86933a2-da42-414a-98af-34049a428608.png)
+
+
+
+
+
+Desenho da forca por: [Marina Imbassahy](https://www.instagram.com/sementedomar_/).
