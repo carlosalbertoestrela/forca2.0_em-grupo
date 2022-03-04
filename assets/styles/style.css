@@ -130,13 +130,17 @@ footer {
 }
 
 #alertaFinal label {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 
 #alertaFinal p {
     font-size: 1.2rem;
     
+}
+
+#alerta {
+    text-align: center;
 }
 
 #alertaFinal #replay{
