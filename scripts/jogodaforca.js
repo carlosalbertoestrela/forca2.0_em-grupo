@@ -28,7 +28,7 @@ function separaCaracteres(palavra = "") {
 }
 
 function tiraVida(tentativas) {
-    //Murilo - essa função serve para alterar a img da forca de acordo com o numero de tentativas
+    //Murillo - essa função serve para alterar a img da forca de acordo com o numero de tentativas
 
     switch (tentativas) {
         case 5:
