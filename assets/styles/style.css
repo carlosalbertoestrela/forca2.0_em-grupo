@@ -59,7 +59,7 @@ footer {
 }
 
 #forca__img {
-    background: url("./../images/forca6.png");
+    /* background: url("./../images/forca6.png"); */
     width: 25rem;
     height: 25rem;
     background-repeat: no-repeat;

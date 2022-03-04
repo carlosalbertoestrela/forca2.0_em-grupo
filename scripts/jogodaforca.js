@@ -71,7 +71,8 @@ fetch("scripts/teste.json")
         return response.json();
     })
     .then((data) => {
-
+        let vida = 6;
+        tiraVida(vida)
         let listaPalavras = data;
         const temaPalavra = sort_Categoria_Palavra(listaPalavras);
         console.log(temaPalavra);
@@ -88,12 +89,19 @@ fetch("scripts/teste.json")
 
         function verificaLetra(letra = '', p = palavra, pS = palavraSecreta) {
 
+            let dentro = false;
             for (i in palavra) {
                 if (p[i] == letra) {
+                    dentro = true
                     pS.splice(i, 1, letra);
                     palavraExibida.innerHTML = `${pS.join('')}`;
-                };
+                }
             };
+            if(!dentro){
+                vida--
+                tiraVida(vida)
+                console.log(vida)
+            }
         }
 
         // retornar letra clicada no teclado
@@ -106,6 +114,7 @@ fetch("scripts/teste.json")
                 console.log(id)
                 letraUsada(id)
                 console.log(`Clicou em ${botoes[x].textContent}`);
+                
             });
         }
 
