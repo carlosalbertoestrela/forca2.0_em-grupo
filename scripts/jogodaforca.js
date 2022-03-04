@@ -85,9 +85,9 @@ fetch("scripts/teste.json")
         tiraVida(vida)
         let listaPalavras = data;
         const temaPalavra = sort_Categoria_Palavra(listaPalavras);
+        let tema = temaPalavra[0];
         let palavra = temaPalavra[1];
         let palavraSecreta = separaCaracteres(palavra);
-        let tema = temaPalavra[0];
 
         //Murilo/Carlos - mostraNaTela(tema, palavraSecreta);
         const mostraCategoria = document.getElementById("categoria__sorteada");
