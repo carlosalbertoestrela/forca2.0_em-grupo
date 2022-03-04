@@ -11,6 +11,8 @@ A forca consome um arquivo JSON de categoria-palavra e apresenta representação
 
 O jogo apresenta um teclado virtual e é composto por quatro temas de palavras distintos, sendo eles: Países, Animais, Frutas e Plantas.
 
+Desenho da forca por: [Marina Imbassahy](https://www.instagram.com/sementedomar_/).
+
 ### Interface gráfica do jogo:
 
 #### Início:
@@ -29,4 +31,4 @@ O jogo apresenta um teclado virtual e é composto por quatro temas de palavras d
 
 
 
-Desenho da forca por: [Marina Imbassahy](https://www.instagram.com/sementedomar_/).
+
