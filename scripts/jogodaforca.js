@@ -66,6 +66,7 @@ const verificaJogo = (vida, palavra, palavraSecreta) =>{
         document.getElementById("teclado__virtual").style.visibility = "hidden";
         document.getElementById("alertaFinal").style.visibility = "visible";
         document.getElementById("categoria__sorteada").style.visibility = "hidden";
+        document.getElementById("palavra__escondida").style.visibility = "hidden";
         if(!vida){
             document.getElementById("alerta").innerHTML = `<p>Deu forca! A palavra era: <strong>${palavra}</strong>!</p>`;
         }else{
