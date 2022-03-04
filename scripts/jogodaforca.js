@@ -54,7 +54,7 @@ function tiraVida(tentativas) {
 };
 
 function letraUsada(clicada) {
-    //Murillo - essa função deve receber o id da tecla clicada para alterar os atributos CSS dela, impedindo o uso repetido desta tecla
+    //Murillo - essa função recebe o id da tecla clicada para alterar os atributos CSS dela, impedindo o uso repetido desta tecla
     document.getElementById(clicada).style.pointerEvents = "none";
     document.getElementById(clicada).style.backgroundColor = "rgba(89, 69, 62, 0.8)";
     document.getElementById(clicada).style.cursor = "not-allowed";
@@ -65,6 +65,7 @@ const verificaJogo = (vida, palavra, palavraSecreta) =>{
         document.getElementById("alertaFinal").removeAttribute("hidden");
         document.getElementById("teclado__virtual").style.visibility = "hidden";
         document.getElementById("alertaFinal").style.visibility = "visible";
+        document.getElementById("categoria__sorteada").style.visibility = "hidden";
         if(!vida){
             document.getElementById("alerta").innerHTML = `<p>Deu forca! A palavra era: <strong>${palavra}</strong>!</p>`;
         }else{
