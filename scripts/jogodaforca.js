@@ -22,14 +22,12 @@ function separaCaracteres(palavra = "") {
         } else {
             caracteresPalavraSorteada = caracteresPalavraSorteada + " ";
         }
-
     }
     return caracteresPalavraSorteada.split('');
 }
 
 function tiraVida(tentativas) {
     //Murillo - essa função serve para alterar a img da forca de acordo com o numero de tentativas
-
     switch (tentativas) {
         case 5:
             document.getElementById("forca__img").style.background = "url('./assets/images/forca1.png')";
@@ -63,12 +61,9 @@ function letraUsada(clicada) {
     document.getElementById(clicada).setAttribute("disabled", "true");
 };
 const verificaJogo = (vida, palavra, palavraSecreta) =>{
-    console.log(palavra == palavraSecreta)
     if (!vida || palavra == palavraSecreta ){
         document.getElementById("alertaFinal").removeAttribute("hidden");
-        // document.getElementById("teclado__virtual").setAttribute("hidden","true");
         document.getElementById("teclado__virtual").style.visibility = "hidden";
-
         document.getElementById("alertaFinal").style.visibility = "visible";
         if(!vida){
             document.getElementById("alerta").innerHTML = `<p>Deu forca! A palavra era: <strong>${palavra}</strong>!</p>`;
@@ -88,17 +83,15 @@ fetch("scripts/teste.json")
         tiraVida(vida)
         let listaPalavras = data;
         const temaPalavra = sort_Categoria_Palavra(listaPalavras);
-        console.log(temaPalavra);
         let palavra = temaPalavra[1];
         let palavraSecreta = separaCaracteres(palavra);
         let tema = temaPalavra[0];
-        console.log(palavraSecreta)
+
         //Murilo/Carlos - mostraNaTela(tema, palavraSecreta);
         const mostraCategoria = document.getElementById("categoria__sorteada");
         mostraCategoria.innerHTML = `${tema}`;
         const palavraExibida = document.getElementById('palavra__escondida');
         palavraExibida.innerHTML = `${palavraSecreta.join('')}`;
-        console.log(palavraSecreta)
 
         function verificaLetra(letra = '', p = palavra, pS = palavraSecreta) {
             // Anna - Verifica se a letra está na palavra e chama as funções tiraVida() e verificaJogo()
