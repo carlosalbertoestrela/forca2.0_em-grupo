@@ -89,7 +89,7 @@ fetch("scripts/teste.json")
         let palavra = temaPalavra[1];
         let palavraSecreta = separaCaracteres(palavra);
 
-        //Murilo/Carlos - mostraNaTela(tema, palavraSecreta);
+        //Murillo/Carlos - mostraNaTela(tema, palavraSecreta);
         const mostraCategoria = document.getElementById("categoria__sorteada");
         mostraCategoria.innerHTML = `${tema}`;
         const palavraExibida = document.getElementById('palavra__escondida');
